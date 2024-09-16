@@ -1,0 +1,82 @@
+#work{
+    text-align: center;
+
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(3,1fr );
+
+    gap: 20px;
+text-align: center;
+margin: 5px;
+
+.item{
+    width: 50%;
+margin: 0 auto;
+}
+    .bio-image,
+    .bio-image-2,
+    .bio-image-3,
+    .bio-image-4,
+    .bio-image-5
+    {
+        margin: 10px auto;
+        border-radius: 50%;
+        border:3px solid #fff;
+        width: 200px;
+        height: 200px;
+        
+ 
+    }
+    .bio-image{
+        background: url('../Images/slide1.jpg')no-repeat center center/cover;
+        
+    }
+    .bio-image-2{
+        background: url('../Images/slide2.jpg')no-repeat center center/cover;
+        
+    }
+    .bio-image-3{
+        background: url('../Images/slide3.jpg')no-repeat center center/cover;
+        
+    }
+    .bio-image-4{
+        background: url('../Images/slide1.jpg')no-repeat center center/cover;
+        
+    }
+    .bio-image-5{
+        background: url('../Images/slide2.jpg')no-repeat center center/cover;
+        
+    }
+  .bio-image:hover,
+  .bio-image-2:hover,
+  .bio-image-3:hover,
+  .bio-image-4:hover,
+  .bio-image-5:hover{
+      opacity: 0.5;
+      border-color: $secondary-color;
+
+  }
+}
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover{
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark{
+@extend .btn;
+background: darken($primary-color,50);
+color:#fff;
+}
+.btn-light{
+    @extend .btn;
+    background: lighten($primary-color,50);
+    color:#333;
+}

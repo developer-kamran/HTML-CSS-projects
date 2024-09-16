@@ -1,0 +1,68 @@
+@media (max-width:1000px) {
+    .home_img {
+        display: none;
+    }
+
+    .logo {
+        top : 10px;
+        left: 40px;
+
+    }
+
+    section {
+        padding: 16.2px 2.5rem;
+    }
+
+    .navigation ul li a {
+        font-size: 2rem;
+    }
+
+    .portfolio {
+        justify-content: initial;
+    }
+
+    .services .service {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        width  : 100%;
+        padding: 30px 30px 20px;
+    }
+
+    .contact-form .row {
+        flex-direction: column;
+    }
+
+    .contact-form .input50,
+    .contact-form .input100 {
+        width : 100%;
+        margin: 0;
+    }
+
+    .contact-info {
+        width     : 100%;
+        margin-top: 20px;
+        padding   : 30px 30px;
+    }
+}
+
+@media (max-width:1250px) {
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+}

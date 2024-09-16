@@ -1,0 +1,56 @@
+
+#about{
+    padding: 2rem;
+    margin: 0;
+}
+.about-info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 'bioimage bio bio'
+                        'job1 job2 job3';
+    gap: 30px;
+
+    .bio-image{
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: 3px solid $secondary-color;
+        width: 200px;
+        height: 200px;
+        background: url('../Images/king.jpg')no-repeat center center/cover;
+    
+    
+    }
+    .bio{
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+    .job-1{
+    
+        grid-area: job1;
+    }
+    .job-2{
+        grid-area: job2;
+    }
+    .job-3{
+        grid-area: job3;
+    }
+    .job{
+        background: lighten($primary-color,5);
+        padding: 2rem;
+        border-bottom: 5px solid $secondary-color;
+h4{
+    margin-bottom: 15px;
+}
+    }
+}
+
+#main-footer {
+    
+    text-align: center;
+    padding: 1rem;
+    background:darken($primary-color,10);
+    color: set-text-color($primary-color);
+    height: 60px;
+
+}

@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* VARIABLES */
+
+:root {
+    --primary-color  : #f60f20;
+    --secondary-color: #1b206e;
+    --transition     : all 0.3s linear
+}
+
+
+/* CSS RESET */
+
+*,
+*::after,
+*::before {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+
+
+/* GENERAL STYLING */
+
+html {
+    scroll-behavior   : smooth;
+    scroll-padding-top: 200px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color      : #111;
+}
+
+h1 {
+    font-size     : 30px;
+    text-transform: capitalize;
+    font-weight   : 500;
+}
+
+p {
+    margin   : 20px 0 10px 0;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    display       : flex;
+    align-items   : center;
+    flex-direction: column;
+    height        : 100vh;
+    padding       : 6.2rem;
+    margin-top    : 60px;
+}
+
+.home {
+    flex-direction: row;
+    margin-top    : 0;
+
+}
+
+
+
+/* BUTTON */
+
+.btn {
+    display   : inline-block;
+    margin    : 20px 0;
+    border    : transparent;
+    padding   : 0.65rem 1.85rem;
+    background: var(--primary-color);
+    color     : #fff;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
+
+
+
+
+/* TOGGLE */
+
+.navigation {
+    position        : fixed;
+    top             : 0;
+    left            : 100%;
+    width           : 100%;
+    height          : 100%;
+    background-color: #fff;
+    z-index         : 15;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    transition      : all 0.4s linear;
+
+}
+
+.navigation.active {
+    left: 0;
+}
+
+.navigation ul {
+    position: relative;
+}
+
+.navigation ul li {
+    text-align: center;
+}
+
+.navigation ul li a {
+    font-size  : 2.2rem;
+    color      : #111;
+    font-weight: 300;
+}
+
+.navigation ul li a:hover {
+    color: var(--primary-color);
+}
+
+.navigation>.social_bar {
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    width          : 60px;
+    height         : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.navigation>.social_bar a {
+    display  : inline-block;
+    transform: scale(0.7);
+}
+
+.navigation .email_icon {
+    position : absolute;
+    bottom   : 20px;
+    transform: scale(0.5);
+}
+
+
+.toggle {
+    position           : fixed;
+    top                : 0;
+    right              : 10px;
+    width              : 60px;
+    height             : 60px;
+    background         : var(--primary-color) url(../../images/menu.png);
+    background-size    : 30px;
+    background-position: center;
+    background-repeat  : no-repeat;
+    z-index            : 20;
+    cursor             : pointer;
+    transition         : var(--transition);
+
+}
+
+.toggle.active {
+    background         : var(--primary-color) url(../../images/close.png);
+    background-size    : 20px;
+    background-position: center;
+    background-repeat  : no-repeat;
+}
+
+
+
+/* HOME */
+
+.logo {
+    position    : absolute;
+    top         : 20px;
+    left        : 100px;
+    font-size   : 2.25rem;
+    padding-left: 16px;
+    color       : rgb(30, 33, 110);
+    font-weight : 600;
+    border-left : 13px solid var(--primary-color);
+    z-index     : 20;
+}
+
+.home_img {
+    position: absolute;
+    bottom  : 0;
+    right   : 0;
+    height  : 110%;
+}
+
+.home_content {
+    z-index  : 10;
+    max-width: 600px;
+    position : relative;
+}
+
+
+/* SERVICES */
+
+.services {
+    margin-top           : 40px;
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap                  : 2.5rem;
+    text-align           : center;
+}
+
+.services .service h2 {
+    font-size     : 1.5rem;
+    text-transform: capitalize;
+    font-weight   : 500;
+    margin-top    : 20px;
+    color         : var(--secondary-color);
+}
+
+.services .service {
+    padding      : 30px;
+    border-radius: 8px;
+    background   : #f6f6f6;
+    transition   : var(--transition);
+
+}
+
+.services .service:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.services .service .icon img {
+    max-width: 100px;
+}
+
+
+/* WORK */
+
+
+.portfolio {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+    margin-top     : 20px;
+}
+
+.portfolio .item {
+    width   : 300px;
+    height  : 300px;
+    position: relative;
+    margin  : 5px;
+}
+
+.portfolio .item img {
+    width : 100%;
+    height: 100%;
+}
+
+.portfolio .item .action {
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    width          : 100%;
+    height         : 100%;
+    background     : rgba(0, 0, 0, 0.8);
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    opacity        : 0;
+    transition     : var(--transition);
+}
+
+.portfolio .item:hover .action a {
+    display   : inline-block;
+    color     : #fff;
+    border    : 1px solid #fff;
+    padding   : 5px 15px;
+    transition: var(--transition);
+}
+
+.portfolio .item:hover .action a:hover {
+    background: #fff;
+    color     : #111;
+    transform : scale(0.9);
+
+}
+
+.portfolio .item:hover .action {
+    opacity: 1;
+}
+
+
+/* CONTACT */
+
+.contact {
+    position       : relative;
+    width          : 100%;
+    margin-top     : 50px;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : flex-start;
+}
+
+.contact-form {
+    position     : relative;
+    background   : #f9f9f9;
+    width        : calc(100% - 400px);
+    padding      : 60px 40px 20px;
+    border-radius: 12px;
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.contact-form .row {
+    display: flex;
+    width  : 100%;
+}
+
+.contact-form .input50 {
+    width : 50%;
+    margin: 0 10px;
+}
+
+.contact-form .input100 {
+    width : 100%;
+    margin: 0 10px;
+}
+
+.contact-form .row input,
+.contact-form .row textarea {
+    border     : 1px solid rgba(0, 0, 0, 0.12);
+    position   : relative;
+    padding    : 10px;
+    color      : #111;
+    width      : 100%;
+    background : transparent;
+    outline    : none;
+    font-size  : 16px;
+    font-weight: 300;
+    margin     : 10px 0;
+    resize     : none;
+}
+
+.contact-form .row textarea {
+    height: 150px;
+}
+
+.contact-form .row input[type='submit'] {
+    background-color: var(--secondary-color);
+    color           : #fff;
+    text-transform  : uppercase;
+    margin          : 0;
+    letter-spacing  : 2px;
+    border          : 0;
+    font-weight     : 300;
+    cursor          : pointer;
+}
+
+.contact-info {
+    width        : 350px;
+    background   : #f9f9f9;
+    padding      : 60px 40px 20px;
+    border-radius: 12px;
+}
+
+.contact-info .info-box {
+    display      : flex;
+    align-items  : flex-start;
+    margin-bottom: 40px;
+}
+
+.contact-info .info-box .contact-icon {
+    width       : 25px;
+    margin-right: 40px;
+}
+
+.contact-info .info-box .details h4 {
+    color: var(--secondary-color);
+}
+
+.contact-info .info-box .details a,
+.contact-info .info-box .details p {
+    color: #111;
+}
+
+.navigation ul li a.current {
+    color: var(--primary-color);
+}

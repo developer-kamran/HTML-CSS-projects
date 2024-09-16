@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #4891ff;
+    --light-color  : #f4f4f6;
+    --dark-color   : #111;
+}
+
+.container {
+    max-width: 1100px;
+    margin   : 0 auto;
+    padding  : 0 15px;
+    overflow : hidden;
+}
+
+.container-sm {
+    max-width: 800px;
+}
+
+/* Background */
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+    color           : #fff !important;
+}
+
+.bg-light {
+    background-color: var(--light-color) !important;
+    color           : #333 !important;
+}
+
+.bg-dark {
+    background-color: var(--dark-color) !important;
+    color           : #fff !important;
+}
+
+.bg-black {
+    background-color: #000 !important;
+    color           : #fff !important;
+}
+
+/* Text  */
+
+.text-sm {
+    font-size  : 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin     : 10px 0 5px;
+}
+
+.text-md {
+    font-size  : 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin     : 20px 0 10px;
+}
+
+.text-lg {
+    font-size  : 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin     : 30px 0 20px;
+}
+
+.text-xl {
+    font-size  : 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin     : 40px 0 20px;
+}
+
+.text-xxl {
+    font-size  : 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin     : 40px 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Button  */
+
+.btn {
+    display        : inline-block;
+    text-align     : center;
+    padding        : 13px 20px;
+    background     : var(--light-color);
+    color          : #333;
+    font-weight    : 600;
+    text-decoration: none;
+    border         : none;
+    border-radius  : 10px;
+    cursor         : pointer;
+    transition     : 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color     : #fff;
+}
+
+.btn-dark {
+    background: var(--dark-color);
+    color     : #fff;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Card */
+
+.card {
+    background   : #fff;
+    color        : #000;
+    border-radius: 10px;
+    padding      : 20px;
+}

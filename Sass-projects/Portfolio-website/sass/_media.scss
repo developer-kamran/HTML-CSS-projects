@@ -1,0 +1,96 @@
+  //media queries
+ 
+  @mixin mediaSm{
+    @media screen and (max-width:500px) {
+      @content;
+    }
+  }
+  @mixin mediaMd{
+    @media screen and (max-width:768px) {
+      @content;
+    }
+  }
+  @mixin mediaLg{
+    @media screen and (min-width:769px) and (max-width:1170px) {
+      @content;
+    }
+  }
+ 
+  @mixin mediaXl{
+    @media screen and (min-width:1171px) {
+      @content;
+    }
+  }
+  
+
+  //widescreen
+  @include mediaXl{
+.projects{
+  grid-template-columns: repeat(4,1fr );
+}
+  }
+    //desktops and laptops
+    @include mediaLg{
+      .projects{
+        grid-template-columns: repeat(3,1fr );
+      }
+    }
+      //tablet and small laptops
+  @include mediaMd{
+    .projects{
+      grid-template-columns: repeat(2,1fr );
+    }
+    main {
+      align-items: center;
+      text-align: center;
+ 
+      .lg-heading{
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+    }
+    ul.menu-nav,div.menu-branding{
+      float: none;
+      width: 100%;
+      min-height: 0;
+      &.show{
+        transform: translate3d(0,0,0);
+      }
+
+    }
+    .menu-nav{
+      height: 75vh;
+      transform: translate3d(-100%,0,0);
+      font-size: 24px;
+    }
+    .menu-branding{
+      height: 25vh;
+      transform: translate3d(100%,0,0);
+     .portrait{
+       background: url('.../Images/king.jpg')no-repeat center center/cover;
+       width: 150px;
+       height: 150px;
+     }
+    
+  }
+  .about-info{
+    grid-template-areas: 
+    'bioimage'
+    'bio'
+    'job1'
+    'job2'
+    'job3'
+    ;
+    grid-template-columns: 1fr;
+  }
+}
+    //smartPhones
+    @include mediaSm{
+      grid-template-columns: repeat(1,1fr );
+      main#home h1 {
+        margin-top: 10vh;
+      }
+    
+    }
+
+
